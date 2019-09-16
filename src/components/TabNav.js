@@ -11,5 +11,39 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/collections/breadcrumb/
 
 export default function TabNav() {
+    const panes = [
+    { menuItem: 'Home', render: () => <Tab.Pane><div>
+    <h2>Where's My Portal Gun!?</h2>
+    <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"></img>
+  </div></Tab.Pane> },
+    { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+    { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+    { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+    ]
 
+    const TabExampleVerticalTabular = () => (
+    <Tab menu={{ fluid: true, vertical: true, tabular: true }} panes={panes} />
+    )
+
+    return(
+        <div>
+        <div class="ui grid">
+            <div class="four wide column">
+            <div class="ui fluid vertical tabular menu">
+                <a class="active item">Home</a>
+                <a class="item">Characters</a>
+                <a class="item">Locations</a>
+                <a class="item">Episodes</a>
+            </div>
+            </div>
+            <div class="stretched twelve wide column">
+            <div class="ui bottom attached segment active tab">Tab 1 Content</div>
+            </div>
+        </div>
+        </div>
+    )
 };
+
+
+
+// export default TabExampleVerticalTabular

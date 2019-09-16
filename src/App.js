@@ -11,11 +11,11 @@ export default function App() {
   return (
     <main>
       <Header />
-      {/* <TabNav /> */}
-      <div>
+      <TabNav />
+      {/* <div>
         <h2>Where's My Portal Gun!?</h2>
         <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"></img>
-      </div>
+      </div> */}
       
     </main>
   );
