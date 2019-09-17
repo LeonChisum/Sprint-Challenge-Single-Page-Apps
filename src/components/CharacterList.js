@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import CharacterCard from './CharacterCard'
+import { Card } from 'semantic-ui-react';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -21,11 +22,14 @@ export default function CharacterList() {
 
   return (
     <section className="character-list grid-view">
-       <div>
-          {characters.map(person => (
-            <CharacterCard key={person.id} character={person} />
-  ))}
-       </div>
+        <div className="ui bottom attached segment active tab">
+            {characters.map(person => (
+            
+                <CharacterCard key={person.id} character={person} />
+              
+    ))}
+        </div>
+
     </section>
   );
 }
